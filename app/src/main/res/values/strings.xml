@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ajmaninspection2</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="what_is_your_preferred_language">what is your preferred language?</string>
+    <string name="preferred_lang_ar">ماهى لغتك المفضلة؟</string>
+    <string name="Forget_pass_txt"><u>Forget Password?</u></string>
+</resources>

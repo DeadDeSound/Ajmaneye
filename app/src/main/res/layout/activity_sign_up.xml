@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".SignUpActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar">
+
+        <RelativeLayout
+            android:id="@+id/signUpParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            >
+
+
+            <ImageView
+                android:id="@+id/registerPoster"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bannersignup" />
+
+            <EditText
+                android:id="@+id/editTxtFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/registerPoster"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:nextFocusDown="@id/editTxtEmail"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittextbackground"
+                android:hint="Full Name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@color/signup_edittext_hint"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/editTxtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTxtFullName"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittextbackground"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="#868686"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/phoneRelativeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTxtEmail"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittextbackground">
+
+                <EditText
+                    android:id="@+id/editTxtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/phoneTxtView"
+                    android:background="@drawable/edittextbackgroundphone"
+                    android:hint="Phone Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:lines="1"
+                    android:digits="012 345 6789"
+                    android:maxLength="13"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColor="#868686"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/phoneTxtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:text="+971"
+                    android:textColor="#868686"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/editTxtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phoneRelativeView"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittextbackground"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="#868686"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/editTxtConfrimPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTxtPassword"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittextbackground"
+                android:hint="confirm Password"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="#868686"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/relativeGenderView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTxtConfrimPass"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittextbackground"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="Gender"
+                    android:textColor="#868686"
+                    android:textSize="16sp" />
+
+
+                <ImageView
+                    android:id="@+id/maleSignupImg"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/femalesignup" />
+
+                <ImageView
+                    android:id="@+id/toggleMaleFemaleBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toStartOf="@id/maleSignupImg"
+                    android:src="@drawable/checkmale" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/toggleMaleFemaleBtn"
+                    android:src="@drawable/malesignup" />
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/buttonReview"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/relativeGenderView"
+                android:layout_marginBottom="40dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/choose_lang_checked"
+                android:text="Register"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
+
+
+
+
